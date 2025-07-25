@@ -68,6 +68,7 @@ export default function UserSignUp() {
       router.replace("/(user)/auth/sign-in");
     },
     onError: (error) => {
+      console.log(error);
       const message =
         (error as any)?.response?.data?.message ?? "Something went wrong";
       Alert.alert("Error", message);
